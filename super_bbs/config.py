@@ -27,8 +27,8 @@ class BaseConfig(object):
     CELERY_ENABLE_UTC = 'False'
 
     SESSION_TYPE = 'redis'
-    SESSION_REDIS = redis.Redis(host='127.0.0.1', port=6379, db=0)
-    REDIS_URL = 'redis://127.0.0.1:6379/6'
+    SESSION_REDIS = redis.Redis(host='192.168.0.200', port=6379, db=0)
+    REDIS_URL = 'redis://192.168.0.200:6379/6'
 
     MAIL_SERVER = 'smtpdm.aliyun.com'
     MAIL_PORT = 465
@@ -44,9 +44,9 @@ class BaseConfig(object):
 
 
 class DevConfig(BaseConfig):
-    BROKER_URL = 'redis://127.0.0.1:6379/1'
-    PRIVATE_KEY_PATH = '/home/yang/.ssh/id_rsa'
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://flask:123456@localhost:3306/super_bbs?charset=utf8mb4'
+    BROKER_URL = 'redis://192.168.0.200:6379/1'
+    PRIVATE_KEY_PATH = '/home/zero/.ssh/id_rsa'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://flask:123456@192.168.0.200:3306/super_bbs?charset=utf8mb4'
 
 
 class TestConfig(BaseConfig):
