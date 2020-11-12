@@ -5,6 +5,7 @@ from flask_session import Session
 from celery import Celery
 from flask_redis import FlaskRedis
 
+
 db = SQLAlchemy()
 migrate = Migrate()
 mail = Mail()
